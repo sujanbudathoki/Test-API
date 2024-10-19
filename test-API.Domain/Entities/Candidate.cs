@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace test_API.Domain.Entities
 {
-    public class Candidates
+    public class Candidate
     {
         [Required]
         public string FirstName { get; set; }

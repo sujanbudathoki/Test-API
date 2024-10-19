@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using test_API.Domain.Entities;
 
-namespace test_API.Persistance.AppDBContext
+namespace test_API.Data
 {
     public class AppDBContext : DbContext
     {
-        public DbSet<Candidates> Candidates { get; set; }
+        public DbSet<Candidate> Candidates { get; set; }
         public AppDBContext(DbContextOptions<AppDBContext> options):base(options)
         {
 

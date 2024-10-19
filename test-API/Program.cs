@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using test_API.Persistance.AppDBContext; 
+using test_API.Data;
+using test_API.Data.Repository;
+using test_API.Domain.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(connectionString));
+
+//Register for DI
+builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
 
 // Add services to the container.
 builder.Services.AddControllers();
