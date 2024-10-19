@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using test_API.Persistance.AppDBContext;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +11,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+//fetch connection string
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AppDBContext>(options =>
+    options.UseSqlServer(connectionString));
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
