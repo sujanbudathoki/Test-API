@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\test-API.Persistance\Candidate_API.Data.csproj" />
+    <ProjectReference Include="..\test-API.Service\Candidate-API.Service.csproj" />
   </ItemGroup>
 
 </Project>
