@@ -22,4 +22,8 @@
     <ProjectReference Include="..\test-API.Service\Candidate-API.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Middleware\" />
+  </ItemGroup>
+
 </Project>
