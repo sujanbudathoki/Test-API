@@ -12,5 +12,8 @@ namespace test_API.Domain.Repository
         Task<Candidate?> GetCandidateByEmailAsync(string email);
         Task AddCandidateAsync(Candidate candidate);
         Task UpdateCandidateAsync(Candidate candidate);
+
+        Task<IEnumerable<Candidate>> getAllCandidates();
+
     }
 }

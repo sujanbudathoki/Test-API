@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\test-API.Domain\Candidate_API.Core.csproj" />
+  </ItemGroup>
+
 </Project>

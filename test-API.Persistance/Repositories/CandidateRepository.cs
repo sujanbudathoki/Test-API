@@ -35,6 +35,12 @@ namespace test_API.Data.Repository
             _context.Candidates.Update(candidate);
             await _context.SaveChangesAsync();
         }
-    }
 
+        public async Task<IEnumerable<Candidate>> getAllCandidates()
+        {
+            return await _context.Candidates.ToListAsync();
+        }
+    }
 }
+
+

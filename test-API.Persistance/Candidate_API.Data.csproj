@@ -24,4 +24,8 @@
     <ProjectReference Include="..\test-API.Domain\Candidate_API.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>
